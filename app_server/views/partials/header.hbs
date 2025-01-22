@@ -1,0 +1,22 @@
+<header>
+    <h1>Travlr Getaways</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+notepad partials\footer.hbs
+<footer>
+    <p>&copy; 2025 Travlr Getaways. All rights reserved.</p>
+</footer>
+<footer>
+    <p>&copy; {{year}} Travlr Getaways. All rights reserved.</p>
+</footer>
+const homePage = (req, res) => {
+    const currentYear = new Date().getFullYear();
+    res.render('index', {
+        title: 'Travlr Getaways',
+        year: currentYear,
+    });
+};
