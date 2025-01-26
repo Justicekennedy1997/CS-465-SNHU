@@ -5,17 +5,22 @@ const hbs = require('express-handlebars');
 const app = express();
 
 // Set up Handlebars
-app.engine('hbs', hbs.engine({ extname: 'hbs', defaultLayout: 'main', layoutsDir: path.join(__dirname, 'app_server', 'views', 'layouts') }));
+app.engine('hbs', hbs.engine({ extname: 'hbs' }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 
-// Middleware to serve static files
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Import and use routes
+// Pass dynamic year
+app.use((req, res, next) => {
+  res.locals.year = new Date().getFullYear();
+  next();
+});
+
+// Import routes
 const travelRouter = require('./app_server/routes/travel');
 app.use('/', travelRouter);
 
 // Start the server
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));

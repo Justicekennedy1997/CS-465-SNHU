@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Gale Reef Adventure",
+        "description": "Explore the breathtaking coral reefs of Gale Reef.",
+        "price": "$250",
+        "image": "reef1.jpg"
+    },
+    {
+        "name": "Dawson’s Reef Dive",
+        "description": "Dive into the mysteries of Dawson’s Reef.",
+        "price": "$300",
+        "image": "reef2.jpg"
+    },
+    {
+        "name": "Claire’s Reef Expedition",
+        "description": "Experience the beauty of Claire’s Reef up close.",
+        "price": "$275",
+        "image": "reef3.jpg"
+    }
+]

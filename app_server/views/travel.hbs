@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{> header}}
+
+    <main>
+        <h1>{{title}}</h1>
+        <ul>
+            {{#each trips}}
+                <li>
+                    <h2>{{name}}</h2>
+                    <p>{{description}}</p>
+                    <p><strong>Price:</strong> {{price}}</p>
+                    <img src="/images/{{image}}" alt="{{name}}" style="width:300px;height:auto;">
+                </li>
+            {{/each}}
+        </ul>
+    </main>
+
+    {{> footer}}
+</body>
+</html>

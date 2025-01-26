@@ -6,6 +6,8 @@
     <title>{{title}}</title>
 </head>
 <body>
-    {{{body}}}
+    {{> header}} <!-- Include header partial -->
+    {{{body}}} <!-- Content from the view -->
+    {{> footer}} <!-- Include footer partial -->
 </body>
 </html>
