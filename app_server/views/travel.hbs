@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-</head>
-<body>
-    {{> header}}
+<h1>{{title}}</h1>
 
-    <main>
-        <h1>{{title}}</h1>
-        <ul>
-            {{#each trips}}
-                <li>
-                    <h2>{{name}}</h2>
-                    <p>{{description}}</p>
-                    <p><strong>Price:</strong> {{price}}</p>
-                    <img src="/images/{{image}}" alt="{{name}}" style="width:300px;height:auto;">
-                </li>
-            {{/each}}
-        </ul>
-    </main>
-
-    {{> footer}}
-</body>
-</html>
+<ul>
+    {{#each trips}}
+    <li>
+        <strong>{{name}}</strong> <br>
+        Price: {{perPerson}} <br>
+        Duration: {{length}} <br>
+        Start Date: {{start}} <br>
+        Resort: {{resort}} <br>
+        <img src="/images/{{image}}" alt="{{name}}" width="200">
+        <p>{{description}}</p>
+    </li>
+    {{/each}}
+</ul>

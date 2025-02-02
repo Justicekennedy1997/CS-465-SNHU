@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const ctrlTravel = require('../controllers/travel');
+const travelController = require('../controllers/travel'); // Import controllers
 
-router.get('/', ctrlTravel.homePage);
+router.get('/', travelController.travelPage); // Fix route to use `travelPage`
 
 module.exports = router;

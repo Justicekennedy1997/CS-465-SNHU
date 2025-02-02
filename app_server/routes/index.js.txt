@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+
+const travelRouter = require('./travel'); // Import travel.js
+const apiRouter = require('./api'); // Import api.js (if needed)
+
+router.use('/travel', travelRouter); // Route all "/travel" requests to travel.js
+router.use('/api', apiRouter); // Optional: Route "/api" to api.js if needed
+
+module.exports = router;
