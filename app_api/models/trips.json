@@ -1,0 +1,22 @@
+[
+  {
+    "code": "T123",
+    "name": "Ocean Adventure",
+    "length": "7 days",
+    "start": "2024-06-01",
+    "resort": "Tropical Beach",
+    "perPerson": "$1999",
+    "image": "ocean.jpg",
+    "description": "A fun adventure in the ocean."
+  },
+  {
+    "code": "T456",
+    "name": "Mountain Escape",
+    "length": "5 days",
+    "start": "2024-07-15",
+    "resort": "Alpine Lodge",
+    "perPerson": "$1499",
+    "image": "mountain.jpg",
+    "description": "Experience the beauty of the mountains."
+  }
+]
